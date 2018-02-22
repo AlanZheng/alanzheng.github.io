@@ -1,88 +1,75 @@
 <!DOCTYPE html>
-<!--
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Alan's Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="Alan's Page">
+		<meta name="author" content="AlanZheng">
+		<meta name="robots" content="index, follow">
 
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
 
+		<!-- Override CSS file - add your own CSS rules -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+        
+        <script src="js/page.js"></script>
+	</head>
+	<body>
+    
+        <div class="main">
+            <ul>
+                <li style="float:left">
+                    <div class="logo-btn" onclick="logobtn()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="contact/index.html">Contact</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+    
+        <div class="sidebar">
+            <ul>
+              <li>Tutorials
+                <ul class="submenu">
+                    <li><a href="tutorials/cssmodel">CSS Model</a></li>
+                    <li><a href="tutorials/gimp">GIMP</a></li>
+                    <li><a href="tutorials/blender">Blender</a></li>
+                </ul>
+              </li>
+              <li>Projects
+                <ul class="submenu">
+                    <li><a href="projects/gimp">GIMP</a></li>
+                    <li><a href="projects/blender">Blender</a></li>
+                    <li><a href="projects/steemtools">SteemitTools</a></li>
+                </ul>
+              </li>
+              <li>Demos</li>
+            </ul>
+        </div>
+        
+        <div id="contents">
 
-                   /
-              (   (   (
-               \   \   \
-                \   \   \
-                 )   )   )
-                    /
+        <img src="img/css_modelbox.png" />
+        <p>Explanation of the different parts:</p>
+        <ul>
+            <li><strong>Content</strong> - The content of the box, where text and images appear</li>
+            <li><strong>Padding</strong> - Clears an area around the content. The padding is transparent</li>
+            <li><strong>Border</strong> - A border that goes around the padding and content</li>
+            <li><strong>Margin</strong> - Clears an area outside the border. The margin is transparent</li>
+        </ul>
+        <p><a href="https://www.w3schools.com/css/default.asp" target="_block">Refer : https://www.w3schools.com/css/default.asp</a></p>
 
-              SelfSteem v2
-      github.com/jnordberg/selfsteem
-
-
--->
-<html lang="en" class="no-js">
-<head>
-  <meta charset="utf-8">
-  <title>alanzheng's Blog</title>
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="A shiny blog powered by the steem blockchain">
-  <meta name="author" content="alanzheng">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="alanzheng's Blog">
-  <meta property="og:description" content="A shiny blog powered by the steem blockchain">
-  <script type="text/javascript">
-    document.documentElement.classList.remove('no-js')
-    window.config = {
-      locale: 'en',
-      username: 'alanzheng',
-      server: 'https://api.steemit.com'
-    }
-  </script>
-  <link rel="stylesheet" href="selfsteem.css?v=2">
-  <script src="selfsteem.js?v=2"></script>
-</head>
-<body>
-  <div id="no-js">
-    <p>
-      This blog is powered by the <a href="https://steem.io" target="_blank">Steem blockchain</a> and requires JavaScript to run.
-    </p>
-  </div>
-  <header>
-    <h1>alanzheng's Blog</h1>
-  </header>
-  <section id="posts">
-    <div class="loading">
-      <p>Loading...</p>
-      <div><span></span><span></span><span></span><span></span></div>
-    </div>
-  </section>
-  <section id="posts-nav">
-    <a class="older" href="#">Older posts</a>
-    <a class="home" href="#">Home</a>
-  </section>
-  <footer>
-    <h2>About</h2>
-    <section class="about">
-      <p><a href="https://steemit.com/@alanzheng">Follow me</a></p>
-
-    </section>
-    <section class="footnote">
-      <p>© 2017 alanzheng &mdash;
-      powered by <a href="https://github.com/jnordberg/selfsteem" target="_blank">SelfSteem</a>
-    </section>
-  </footer>
-  <div id="templates">
-    <article class="post preview">
-      <header>
-        <h1><a class="permalink title" href="#" rel="bookmark">Title</a></h1>
-        <p class="date">Date</p>
-      </header>
-      <section class="body"></section>
-      <p class="more"><a class="permalink" href="#">Read more</a>
-    </article>
-    <article class="post full">
-      <header>
-        <p class="date">Date</p>
-        <h1 class="title">Title</h1>
-      </header>
-      <section class="body"></section>
-    </article>
-  </div>
-
-</body>
+        </div>
+        
+	</body>
 </html>
