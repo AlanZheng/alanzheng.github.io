@@ -33,10 +33,6 @@
         <script src="../js/page.js"></script>
         
         <style>
-            #layout {
-                width: auto;
-            }
-            
             #md_sidebar {
                 width: 400px;
                 height: 100%;
@@ -112,7 +108,6 @@
         
         <div id="contents">
             
-            <div id="layout">
                 <div id="md_sidebar">
                     <h1>Table of Contents</h1>
                     <div class="markdown-body editormd-preview-container" id="custom-toc-container">#custom-toc-container</div>
@@ -123,7 +118,6 @@
                 <div id="test-editormd-view2">
                     <textarea id="append-test" style="display:none;"></textarea>          
                 </div>
-            </div>
             
         </div>
         
@@ -131,7 +125,8 @@
             $(function() {
                 var testEditormdView, testEditormdView2;
                 
-                $.get("test.md", function(markdown) {
+                $.get("test.md", function(markdown) 
+                {
                     
 				    testEditormdView = editormd.markdownToHTML("test-editormd-view", {
                         markdown        : markdown ,//+ "\r\n" + $("#append-test").text(),
