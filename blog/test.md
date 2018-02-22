@@ -4,7 +4,7 @@
 
 ![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
-**鐩綍 (Table of Contents)**
+**目录 (Table of Contents)**
 
 [TOCM]
 
@@ -23,7 +23,7 @@
 ##### Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
 ###### Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
 
-#### 鏍囬锛堢敤搴曠嚎鐨勫舰寮忥級Heading (underline)
+#### 标题（用底线的形式）Heading (underline)
 
 This is an H1
 =============
@@ -31,71 +31,71 @@ This is an H1
 This is an H2
 -------------
 
-### 瀛楃鏁堟灉鍜屾í绾跨瓑
+### 字符效果和横线等
                 
 ----
 
-~~鍒犻櫎绾縹~ <s>鍒犻櫎绾匡紙寮€鍚瘑鍒獺TML鏍囩鏃讹級</s>
-*鏂滀綋瀛�*      _鏂滀綋瀛梍
-**绮椾綋**  __绮椾綋__
-***绮楁枩浣�*** ___绮楁枩浣揰__
+~~删除线~~ <s>删除线（开启识别HTML标签时）</s>
+*斜体字*      _斜体字_
+**粗体**  __粗体__
+***粗斜体*** ___粗斜体___
 
-涓婃爣锛歑<sub>2</sub>锛屼笅鏍囷細O<sup>2</sup>
+上标：X<sub>2</sub>，下标：O<sup>2</sup>
 
-**缂╁啓(鍚孒TML鐨刟bbr鏍囩)**
+**缩写(同HTML的abbr标签)**
 
-> 鍗虫洿闀跨殑鍗曡瘝鎴栫煭璇殑缂╁啓褰㈠紡锛屽墠鎻愭槸寮€鍚瘑鍒獺TML鏍囩鏃讹紝宸查粯璁ゅ紑鍚�
+> 即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启
 
 The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
 
-### 寮曠敤 Blockquotes
+### 引用 Blockquotes
 
-> 寮曠敤鏂囨湰 Blockquotes
+> 引用文本 Blockquotes
 
-寮曠敤鐨勮鍐呮贩鍚� Blockquotes
+引用的行内混合 Blockquotes
                     
-> 寮曠敤锛氬鏋滄兂瑕佹彃鍏ョ┖鐧芥崲琛宍鍗�<br />鏍囩`锛屽湪鎻掑叆澶勫厛閿叆涓や釜浠ヤ笂鐨勭┖鏍肩劧鍚庡洖杞﹀嵆鍙紝[鏅€氶摼鎺(http://localhost/)銆�
+> 引用：如果想要插入空白换行`即<br />标签`，在插入处先键入两个以上的空格然后回车即可，[普通链接](http://localhost/)。
 
-### 閿氱偣涓庨摼鎺� Links
+### 锚点与链接 Links
 
-[鏅€氶摼鎺(http://localhost/)
+[普通链接](http://localhost/)
 
-[鏅€氶摼鎺ュ甫鏍囬](http://localhost/ "鏅€氶摼鎺ュ甫鏍囬")
+[普通链接带标题](http://localhost/ "普通链接带标题")
 
-鐩存帴閾炬帴锛�<https://github.com>
+直接链接：<https://github.com>
 
-[閿氱偣閾炬帴][anchor-id] 
+[锚点链接][anchor-id] 
 
 [anchor-id]: http://www.this-anchor-link.com/
 
 [mailto:test.test@gmail.com](mailto:test.test@gmail.com)
 
-GFM a-tail link @pandao  閭鍦板潃鑷姩閾炬帴 test.test@gmail.com  www@vip.qq.com
+GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com
 
 > @pandao
 
-### 澶氳瑷€浠ｇ爜楂樹寒 Codes
+### 多语言代码高亮 Codes
 
-#### 琛屽唴浠ｇ爜 Inline code
+#### 行内代码 Inline code
 
-鎵ц鍛戒护锛歚npm install marked`
+执行命令：`npm install marked`
 
-#### 缂╄繘椋庢牸
+#### 缩进风格
 
-鍗崇缉杩涘洓涓┖鏍硷紝涔熷仛涓哄疄鐜扮被浼� `<pre>` 棰勬牸寮忓寲鏂囨湰 ( Preformatted Text ) 鐨勫姛鑳姐€�
+即缩进四个空格，也做为实现类似 `<pre>` 预格式化文本 ( Preformatted Text ) 的功能。
 
     <?php
         echo "Hello world!";
     ?>
     
-棰勬牸寮忓寲鏂囨湰锛�
+预格式化文本：
 
     | First Header  | Second Header |
     | ------------- | ------------- |
     | Content Cell  | Content Cell  |
     | Content Cell  | Content Cell  |
 
-#### JS浠ｇ爜銆€
+#### JS代码　
 
 ```javascript
 function test() {
@@ -136,7 +136,7 @@ var testBox = box();
 testBox.add("jQuery").remove("jQuery");
 ```
 
-#### HTML 浠ｇ爜 HTML codes
+#### HTML 代码 HTML codes
 
 ```html
 <!DOCTYPE html>
@@ -158,7 +158,7 @@ testBox.add("jQuery").remove("jQuery");
 </html>
 ```
 
-### 鍥剧墖 Images
+### 图片 Images
 
 Image:
 
@@ -168,47 +168,47 @@ Image:
 
 ![](https://pandao.github.io/editor.md/examples/images/8.jpg)
 
-> 鍥句负锛氬帵闂ㄧ櫧鍩庢矙婊�
+> 图为：厦门白城沙滩
 
-鍥剧墖鍔犻摼鎺� (Image + Link)锛�
+图片加链接 (Image + Link)：
 
-[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/images/7.jpg "鏉庡仴棣栧紶涓撹緫銆婁技姘存祦骞淬€嬪皝闈�")
+[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/images/7.jpg "李健首张专辑《似水流年》封面")
 
-> 鍥句负锛氭潕鍋ラ寮犱笓杈戙€婁技姘存祦骞淬€嬪皝闈�
+> 图为：李健首张专辑《似水流年》封面
                 
 ----
 
-### 鍒楄〃 Lists
+### 列表 Lists
 
-#### 鏃犲簭鍒楄〃锛堝噺鍙凤級Unordered Lists (-)
+#### 无序列表（减号）Unordered Lists (-)
                 
-- 鍒楄〃涓€
-- 鍒楄〃浜�
-- 鍒楄〃涓�
+- 列表一
+- 列表二
+- 列表三
      
-#### 鏃犲簭鍒楄〃锛堟槦鍙凤級Unordered Lists (*)
+#### 无序列表（星号）Unordered Lists (*)
 
-* 鍒楄〃涓€
-* 鍒楄〃浜�
-* 鍒楄〃涓�
+* 列表一
+* 列表二
+* 列表三
 
-#### 鏃犲簭鍒楄〃锛堝姞鍙峰拰宓屽锛塙nordered Lists (+)
+#### 无序列表（加号和嵌套）Unordered Lists (+)
                 
-+ 鍒楄〃涓€
-+ 鍒楄〃浜�
-    + 鍒楄〃浜�-1
-    + 鍒楄〃浜�-2
-    + 鍒楄〃浜�-3
-+ 鍒楄〃涓�
-    * 鍒楄〃涓€
-    * 鍒楄〃浜�
-    * 鍒楄〃涓�
++ 列表一
++ 列表二
+    + 列表二-1
+    + 列表二-2
+    + 列表二-3
++ 列表三
+    * 列表一
+    * 列表二
+    * 列表三
 
-#### 鏈夊簭鍒楄〃 Ordered Lists (-)
+#### 有序列表 Ordered Lists (-)
                 
-1. 绗竴琛�
-2. 绗簩琛�
-3. 绗笁琛�
+1. 第一行
+2. 第二行
+3. 第三行
 
 #### GFM task list
 
@@ -224,13 +224,13 @@ Image:
                 
 ----
                     
-### 缁樺埗琛ㄦ牸 Tables
+### 绘制表格 Tables
 
-| 椤圭洰        | 浠锋牸   |  鏁伴噺  |
+| 项目        | 价格   |  数量  |
 | --------   | -----:  | :----:  |
-| 璁＄畻鏈�      | $1600   |   5     |
-| 鎵嬫満        |   $12   |   12   |
-| 绠＄嚎        |    $1    |  234  |
+| 计算机      | $1600   |   5     |
+| 手机        |   $12   |   12   |
+| 管线        |    $1    |  234  |
                     
 First Header  | Second Header
 ------------- | -------------
@@ -261,7 +261,7 @@ Content Cell  | Content Cell
                 
 ----
 
-#### 鐗规畩绗﹀彿 HTML Entities Codes
+#### 特殊符号 HTML Entities Codes
 
 &copy; &  &uml; &trade; &iexcl; &pound;
 &amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot; 
@@ -272,7 +272,7 @@ X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
 
 [========]
 
-### Emoji琛ㄦ儏 :smiley:
+### Emoji表情 :smiley:
 
 > Blockquotes :star:
 
@@ -286,17 +286,17 @@ X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
     - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;
     - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);
  
-#### 鍙嶆枩鏉� Escape
+#### 反斜杠 Escape
 
 \*literal asterisks\*
 
 [========]
             
-### 绉戝鍏紡 TeX(KaTeX)
+### 科学公式 TeX(KaTeX)
 
 $$E=mc^2$$
 
-琛屽唴鐨勫叕寮�$$E=mc^2$$琛屽唴鐨勫叕寮忥紝琛屽唴鐨�$$E=mc^2$$鍏紡銆�
+行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。
 
 $$x > y$$
 
@@ -304,7 +304,7 @@ $$\(\sqrt{3x-1}+(1+x)^2\)$$
                     
 $$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
 
-澶氳鍏紡锛�
+多行公式：
 
 ```math
 \displaystyle
@@ -332,19 +332,19 @@ f(x) = \int_{-\infty}^\infty
     \,d\xi
 ```
 
-### 鍒嗛〉绗� Page break
+### 分页符 Page break
 
 > Print Test: Ctrl + P
 
 [========]
 
-### 缁樺埗娴佺▼鍥� Flowchart
+### 绘制流程图 Flowchart
 
 ```flow
-st=>start: 鐢ㄦ埛鐧婚檰
-op=>operation: 鐧婚檰鎿嶄綔
-cond=>condition: 鐧婚檰鎴愬姛 Yes or No?
-e=>end: 杩涘叆鍚庡彴
+st=>start: 用户登陆
+op=>operation: 登陆操作
+cond=>condition: 登陆成功 Yes or No?
+e=>end: 进入后台
 
 st->op->cond
 cond(yes)->e
@@ -353,7 +353,7 @@ cond(no)->op
 
 [========]
                     
-### 缁樺埗搴忓垪鍥� Sequence Diagram
+### 绘制序列图 Sequence Diagram
                     
 ```seq
 Andrew->China: Says Hello 
