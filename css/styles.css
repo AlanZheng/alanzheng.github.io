@@ -124,6 +124,7 @@ background-color:#a3d5d3;
 .sidebar li:hover .submenu {
   display: block;
   max-height: 500px;
+  z-index: 100;
 }
 
 /*
