@@ -39,11 +39,10 @@
                 height : 100px;
                 position: fixed;
                 overflow: hidden;
-                background: red;
                 z-index: 100;
                 padding: 8px; 
                 border: 2px solid #ddd;
-                background-color: black;
+                background-color: red;
             }
             
             #md_sidebar:hover {
@@ -55,12 +54,16 @@
             }
             
             #custom-toc-container {
-                padding-left: 0;
+                border: 1px solid #ddd;
+                width: 70%;
+                margin: 0 auto 15px;
+                overflow: visible;
+                background-color: black;
             }
             
             #test-editormd-view, #test-editormd-view2 {
                 padding-left: 0;
-                padding-right: 430px;
+                padding-right: 0px;
                 margin: 0;
             }
         </style>
@@ -105,7 +108,6 @@
         <div id="contents">
             
                 <div id="md_sidebar">
-                    <h1>Table of Contents</h1>
                     <div class="markdown-body editormd-preview-container" id="custom-toc-container">#custom-toc-container</div>
                 </div>
                 <div id="test-editormd-view">
@@ -122,13 +124,12 @@
                 
                 $.get("test.md", function(markdown) 
                 {
-                    
 				    testEditormdView = editormd.markdownToHTML("test-editormd-view", {
                         markdown        : markdown ,//+ "\r\n" + $("#append-test").text(),
                         //htmlDecode      : true,       // 开启 HTML 标签解析，为了安全性，默认不开启
                         htmlDecode      : "style,script,iframe",  // you can filter tags decode
-                        //toc             : false,
-                        tocm            : true,    // Using [TOCM]
+                        toc             : true,
+                        tocm            : false,    // Using [TOCM]
                         tocContainer    : "#custom-toc-container", // 自定义 ToC 容器层
                         //gfm             : false,
                         tocDropdown     : true,
