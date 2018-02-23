@@ -54,6 +54,7 @@
             }
             
             #custom-toc-container {
+                position: fixed;
                 border: 1px solid #ddd;
                 overflow: visible;
                 background-color: black;
@@ -105,7 +106,9 @@
         
         <div id="contents">
             
-                <div class="markdown-body editormd-preview-container" id="custom-toc-container">#custom-toc-container</div>
+                <div id="md_sidebar">
+                    <div class="markdown-body editormd-preview-container" id="custom-toc-container">#custom-toc-container</div>
+                </div>
                 <div id="test-editormd-view">
                    <textarea style="display:none;" name="test-editormd-markdown-doc">###Hello world!</textarea>               
                 </div>
