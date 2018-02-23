@@ -58,6 +58,7 @@ background-color:#a3d5d3;
     list-style: none;
     padding: 0;
     margin: 0;
+    z-index: 100;
     //overflow-y:scroll;
 }
 
@@ -78,6 +79,7 @@ background-color:#a3d5d3;
     margin:0px;
     padding:0px;
     list-style:none;
+    z-index: 100;
 }
 
 .sidebar ul ul{
@@ -87,6 +89,7 @@ background-color:#a3d5d3;
     visibility : hidden;
     left: 100%;
     top : -2%;
+    z-index: 100;
 }
 
 .sidebar ul li:hover ul {
@@ -106,6 +109,7 @@ background-color:#a3d5d3;
     border-bottom: 1px solid rgba(100,100,100,0.3);
     text-align: center;
     text-decoration: none;
+    z-index: 100;
 }
 
 .sidebar ul li:hover{
@@ -132,6 +136,7 @@ background-color:#a3d5d3;
     color: white;
     text-align: center;
     text-decoration: none;
+    z-index: 100;
 }
 
 #contents {
