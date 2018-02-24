@@ -1,4 +1,9 @@
-A non-exhaustive list of WebGL frameworks and libraries. It is mostly for learning purposes as some of the libraries listed are outdated/not maintained anymore.
+---
+layout: post
+title: WebGL frameworks and libraries
+---
+
+>A non-exhaustive list of WebGL frameworks and libraries. It is mostly for learning purposes as some of the libraries listed are outdated/not maintained anymore.
 
 # Engines and libraries
 * [three.js](https://github.com/mrdoob/three.js): JavaScript 3D library
