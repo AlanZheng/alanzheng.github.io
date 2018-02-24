@@ -148,7 +148,8 @@ background-color:#a3d5d3;
     margin-top : 100px;
     margin-left: auto;
     margin-right: auto;
-    background-color : green;
+    text-align: left;
+    background-color : #ddd;
 }
 /*
 .contents #text-input{
