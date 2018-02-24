@@ -202,7 +202,8 @@ var CMS = {
 		contentObj.date = date;
 
 		// Get content info
-		var infoData = data[1].split('\n');
+		//var infoData = data[1].split('\n');
+        var infoData = data[0].split('\n');
 
 		$.each(infoData, function(k, v) {
 			if(v.length) {
