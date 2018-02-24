@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Alan's Blog</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="Alan's Blog">
+		<meta name="author" content="AlanZheng">
+		<meta name="robots" content="index, follow">
+
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="../favicon.ico">
+
+		<!-- Override CSS file - add your own CSS rules -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/editormd_style.css" />
+        <link rel="stylesheet" href="../css/editormd.min.css" />
+        <link rel="stylesheet" href="../css/editormd.preview.min.css" />
+        
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/editormd.min.js"></script>
+        <script src="../js/lib/marked.min.js"></script>
+        <script src="../js/lib/prettify.min.js"></script>
+        <script src="../js/lib/raphael.min.js"></script>
+        <script src="../js/lib/underscore.min.js"></script>
+        <script src="../js/lib/sequence-diagram.min.js"></script>
+        <script src="../js/lib/flowchart.min.js"></script>
+        <script src="../js/lib/jquery.flowchart.min.js"></script>
+
+        <script src="../js/page.js"></script>
+        
+        <style>
+            #layout > header, .btns {
+                width: auto;
+            }
+            
+            #md_sidebar {
+                width: 400px;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                right: 0;
+                overflow: hidden;
+                background: #fff;
+                z-index: 100;
+                padding: 18px; 
+                border: 1px solid #ddd;
+                border-top: none;
+                border-bottom: none;
+            }
+            
+            #md_sidebar:hover {
+                overflow: auto;
+            }
+            
+            #md_sidebar h1 {
+                font-size: 16px;
+            }
+            
+            #custom-toc-container {
+                padding-left: 0;
+            }
+            
+            #test-editormd-view, #test-editormd-view2 {
+                padding-left: 0;
+                padding-right: 430px;
+                margin: 0;
+            }
+        </style>
+
+	</head>
+	<body>
+    
+        <div class="main">
+            <ul>
+                <li style="float:left">
+                    <div class="logo-btn" onclick="logobtn()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
+                <li><a href="about/index.html">About</a></li>
+                <li><a href="contact/index.html">Contact</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </div>
+    
+        <div class="sidebar">
+            <ul>
+              <li>Tutorials
+                <ul class="submenu">
+                    <li><a href="tutorials/cssmodel">CSS Model</a></li>
+                    <li><a href="tutorials/gimp">GIMP</a></li>
+                    <li><a href="tutorials/blender">Blender</a></li>
+                </ul>
+              </li>
+              <li>Projects
+                <ul class="submenu">
+                    <li><a href="projects/gimp">GIMP</a></li>
+                    <li><a href="projects/blender">Blender</a></li>
+                    <li><a href="projects/steemtools">SteemitTools</a></li>
+                </ul>
+              </li>
+              <li>Demos</li>
+            </ul>
+        </div>
+        
+        <div id="contents">
+            
+            <div id="layout">
+            <div id="md_sidebar">
+                <h1>Table of Contents</h1>
+                <div class="markdown-body editormd-preview-container" id="custom-toc-container">#custom-toc-container</div>
+            </div>
+            <div id="test-editormd-view">
+               <textarea style="display:none;" name="test-editormd-markdown-doc">###Hello world!</textarea>               
+            </div>
+            <div id="test-editormd-view2">
+                <textarea id="append-test" style="display:none;"></textarea>          
+            </div>
+        </div>
+            
+        </div>
+        
+        <script type="text/javascript">
+            $(function() {
+                var testEditormdView, testEditormdView2;
+                
+                $.get("test.md", function(markdown) {
+                    
+				    testEditormdView = editormd.markdownToHTML("test-editormd-view", {
+                        markdown        : markdown ,//+ "\r\n" + $("#append-test").text(),
+                        //htmlDecode      : true,       // 开启 HTML 标签解析，为了安全性，默认不开启
+                        htmlDecode      : "style,script,iframe",  // you can filter tags decode
+                        //toc             : false,
+                        tocm            : true,    // Using [TOCM]
+                        tocContainer    : "#custom-toc-container", // 自定义 ToC 容器层
+                        //gfm             : false,
+                        //tocDropdown     : true,
+                        // markdownSourceCode : true, // 是否保留 Markdown 源码，即是否删除保存源码的 Textarea 标签
+                        emoji           : true,
+                        taskList        : true,
+                        tex             : true,  // 默认不解析
+                        flowChart       : true,  // 默认不解析
+                        sequenceDiagram : true,  // 默认不解析
+                    });
+                    
+                    //console.log("返回一个 jQuery 实例 =>", testEditormdView);
+                    
+                    // 获取Markdown源码
+                    //console.log(testEditormdView.getMarkdown());
+                    
+                    //alert(testEditormdView.getMarkdown());
+                });
+                    
+                testEditormdView2 = editormd.markdownToHTML("test-editormd-view2", {
+                    htmlDecode      : "style,script,iframe",  // you can filter tags decode
+                    emoji           : true,
+                    taskList        : true,
+                    tex             : true,  // 默认不解析
+                    flowChart       : true,  // 默认不解析
+                    sequenceDiagram : true,  // 默认不解析
+                });
+            });
+        </script>
+
+	</body>
+</html>

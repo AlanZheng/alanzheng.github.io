@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <textarea id="text-input" oninput="this.editor.update()" rows="6" cols="60">Type **Markdown** here.</textarea>
+    <div id="preview"> </div>
+    <script src="js/marked.min.js"></script>
+    <script>
+        marked.setOptions({
+            renderer: new marked.Renderer(),
+            gfm: true,
+            tables: true,
+            breaks: true,
+            pedantic: true,
+            sanitize: true,
+            smartLists: true,
+            smartypants: true,
+            xhtml: false
+        });
+      function Editor(input, preview)
+      {
+        this.update = function ()
+        {
+          preview.innerHTML = marked(input.value);
+        };
+        input.editor = this;
+        this.update();
+      }
+      var $ = function (id) { return document.getElementById(id); };
+      new Editor($("text-input"), $("preview"));
+    </script>
+  </body>
+</html>

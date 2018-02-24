@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cascading Menus</title>
+	<meta name="author" content="Ralph Phillips">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<!-- internal styles -->
+	<style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .menu ul{
+            list-style: none;
+            margin: 0;
+        }
+        .menu ul li{
+            padding : 15px;
+            position : relative;
+            width: 200px;
+            background-color : #34495E;
+            border-right : 5px solid #F1C40F;
+            border-top: 1px solid #BDC3C7;
+        }
+        .menu ul li:hover{
+            background-color: #2ECC71;
+        }
+        .menu ul ul{
+            transition : all 0.3s;
+            opacity : 0;
+            position : absolute;
+            visibility : hidden;
+            left: 80%;
+            top : -2%;
+        }
+        .menu ul li:hover ul {
+            opacity : 1;
+            visibility : visible;
+        }
+        .menu ul li a{
+            color:#fff;
+            text-decoration : none;
+        }
+    </style>
+    <body>
+        <div class="menu">
+            <ul>
+                <li><a<a href=""><span class="fa fa-home"></span>Home</a></li>
+                <li><a<a href=""><span class="fa fa-users">Users</a>
+                    <ul>
+                        <li><a<a href="">Add</a></li>
+                        <li><a<a href="">Edit</a></li>
+                        <li><a<a href="">Delete</a></li>
+                    </ul>
+                </li>
+                <li><a<a href=""><span class="fa fa-desktop">Web Designs</a></li>
+                <li><a<a href=""><span class="fa fa-database">Database</a></li>
+                <li><a<a href=""><span class="fa fa-users">Contact us</a></li>
+            </ul>
+        </div>
+    </body>
+</head>
+</html>
