@@ -3,10 +3,10 @@ $(function() {
 	CMS.init({
 
 		// Name of your site or location of logo file ,relative to root directory (img/logo.png)
-		siteName: 'Alan Site',
+		siteName: '',
 
 		// Tagline for your site
-		siteTagline: 'blog tutorial project demo',
+		siteTagline: '',
 
 		// Email address
 		siteEmail: 'microsuncn@gmail.com',
@@ -16,8 +16,8 @@ $(function() {
 
 		// Navigation items
 		siteNavItems: [
-			{ name: 'Github', href: 'https://github.com/alanzheng', newWindow: false},
-			{ name: 'About'}
+			//{ name: 'Github', href: 'https://github.com/alanzheng', newWindow: false},
+			//{ name: 'About'}
 		],
 
 		// Posts folder name
