@@ -205,7 +205,7 @@ var CMS = {
 		var infoData = data[1].split('\n');
 
 		$.each(infoData, function(k, v) {
-			if(v.length) {
+			if(v.length > 1) {
 				v.replace(/^\s+|\s+$/g, '').trim();
 				var i = v.split(':');
 				var val = i[1];
