@@ -1,3 +1,9 @@
+---
+layout: post
+title: GIMP教程之"下雨啦" | GIMP tutorial -- Raining window font
+tags: [gimp ps photoshop]
+---
+
 GIMP教程之"下雨啦" | GIMP tutorial -- Raining window font
 
 Summary: This GIMP(version 2.8.22) tutorial shows how to create raining window font.

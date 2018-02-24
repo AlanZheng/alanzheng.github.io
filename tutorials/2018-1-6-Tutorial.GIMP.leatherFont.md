@@ -1,3 +1,9 @@
+---
+layout: post
+title: GIMP教程之"皮革文字" | GIMP tutorial -- Leather font
+tags: [gimp ps photoshop]
+---
+
 GIMP教程之"皮革文字" | GIMP tutorial -- Leather font
 
 Summary: This GIMP(version 2.8.22) tutorial shows how to create leather font.

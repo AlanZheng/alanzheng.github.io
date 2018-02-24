@@ -1,3 +1,9 @@
+---
+layout: post
+title: GIMP教程之"发光文字" | GIMP tutorial -- Light Font effect
+tags: [gimp ps photoshop]
+---
+
 GIMP教程之"发光文字" | GIMP tutorial -- Light Font effect
 
 #### Summary:

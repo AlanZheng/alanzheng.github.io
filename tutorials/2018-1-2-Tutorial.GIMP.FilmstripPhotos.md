@@ -1,3 +1,9 @@
+---
+layout: post
+title: GIMP教程之"电影胶片" | GIMP tutorial -- Filmstrip photos
+tags: [gimp ps photoshop]
+---
+
 GIMP教程之"电影胶片" | GIMP tutorial -- Filmstrip photos
 
 Summary: This GIMP(version 2.8.22) tutorial shows how to create Filmstrip photos.

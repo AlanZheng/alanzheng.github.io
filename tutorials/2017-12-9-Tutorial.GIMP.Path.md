@@ -1,3 +1,9 @@
+---
+layout: post
+title: GIMP教程之"路径工具" | GIMP tutorial -- Path Tool
+tags: [gimp ps photoshop]
+---
+
 GIMP教程之"路径工具" | GIMP tutorial -- Path Tool
 
 ![Tutorial.GIMP.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1511486986/feaponrcwwtwu0vmiizt.png)

@@ -1,3 +1,9 @@
+---
+layout: post
+title: GIMP教程之"文字工具" | GIMP tutorial -- Text Tools
+tags: [gimp ps photoshop]
+---
+
 GIMP教程之"文字工具" | GIMP tutorial -- Text Tools
 
 ![Tutorial.GIMP.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1511486986/feaponrcwwtwu0vmiizt.png)
