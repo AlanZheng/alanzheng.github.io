@@ -1,6 +1,7 @@
 ---
 layout: post
 title: WebGL frameworks and libraries
+tags: [webgl js javascript frameworks library]
 ---
 
 A non-exhaustive list of WebGL frameworks and libraries. It is mostly for learning purposes as some of the libraries listed are outdated/not maintained anymore.
