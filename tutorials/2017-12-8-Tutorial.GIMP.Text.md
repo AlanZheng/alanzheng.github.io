@@ -14,7 +14,6 @@ In this tutorial, I will introduce the **Text** tool, and how to use **Text** to
 
 ![image.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1512455457/vndsl50tc4mhz0lg9jk8.png)
 
----
 </br>
 
 ![image.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1512455570/hplk9c8vpiyadrzfqx1b.png)

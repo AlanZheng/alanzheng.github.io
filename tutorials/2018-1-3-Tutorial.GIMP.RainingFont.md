@@ -13,7 +13,6 @@ result:
 
 ![image.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1514955620/cthuochsluf0tq31eonw.png)
 
----
 <br>
 步骤1：使用**作为图层打开**方式将图片打开：
 

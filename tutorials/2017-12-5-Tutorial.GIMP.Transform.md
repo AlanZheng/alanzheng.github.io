@@ -14,7 +14,6 @@ In this tutorial, I will introduce the 9 transform tools: **Align**, **Move**, *
 
 ![image.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1512271199/ejxh0zow5zuzh6usejhp.png)
 
----
 </br>
 
 ![image.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1512271690/cstcqivtwfiddsduff1e.png)

@@ -14,7 +14,6 @@ In this tutorial, I will introduce the **Path** tool, and how to use **Path** an
 
 ![image.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1512732577/zjs7upqi3y729oaylfrm.png)
 
----
 </br>
 
 ![image.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1512732446/a4jkdngspswrldfqot0a.png)
