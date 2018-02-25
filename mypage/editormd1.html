@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple example - Editor.md examples</title>
+        <link rel="stylesheet" href="css/editormd_style.css" />
+        <link rel="stylesheet" href="css/editormd.min.css" />
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="layout">
+            <div id="test-editormd">
+                <textarea style="display:none;"></textarea>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/editormd.min.js"></script>
+        <script type="text/javascript">
+			var testEditor;
+            $(function() {
+                testEditor = editormd("test-editormd", {
+                    width   : "90%",
+                    height  : 640,
+                    watch : false,
+                    path    : "js/lib/",
+                    toolbarIcons : function() {
+                        return ["undo", "redo", "|", "h1", "h2", "h3", "h4", "h5", "h6","|", "bold", "del", "italic", "ucwords", "uppercase", "lowercase", "|",  "hr", "quote", "code", "code-block",  "table",  "list-ul", "list-ol",  "|",  "datetime", "pagebreak", "||", "watch", "fullscreen", "preview"]
+                    },
+                });
+            });
+        </script>
+    </body>
+</html>
