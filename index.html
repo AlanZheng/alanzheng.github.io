@@ -38,7 +38,11 @@
         </div>
     
         <div class="sidebar">
-        <script>$(".sidebar").load("/sidebar.html");</script>
+        <script>
+        $(document).ready(function(){
+            $(".sidebar").load("/sidebar.html");
+        });
+        </script>
         <!--
             <ul>
               <li>Tutorials
