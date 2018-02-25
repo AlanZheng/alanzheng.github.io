@@ -21,13 +21,13 @@ $(function() {
 		],
 
 		// Posts folder name
-		postsFolder: 'tutorials',
+		postsFolder: 'tutorials/gimp',
 
 		// Homepage posts snippet length
 		postSnippetLength: 120,
 
 		// Pages folder name
-		pagesFolder: 'tutorials',
+		pagesFolder: 'tutorials/gimp',
 
 		// Site fade speed
 		fadeSpeed: 300,
