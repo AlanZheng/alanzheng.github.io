@@ -23,19 +23,9 @@
 	<body>
     
         <div class="main">
-            <ul>
-                <li style="float:left">
-                    <div class="logo-btn" onclick="logobtn()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </li>
-                <li><a href="about/index.html">About</a></li>
-                <li><a href="contact/index.html">Contact</a></li>
-                <li><a href="blog/index.html">Blog</a></li>
-                <li><a href="index.html">Home</a></li>
-            </ul>
+        $(document).ready(function(){
+            $(".main").load("/mainbar.html");
+        });
         </div>
     
         <div class="sidebar">

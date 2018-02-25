@@ -29,37 +29,17 @@
 	<body>
     
         <div class="main">
-            <ul>
-                <li style="float:left">
-                    <div class="logo-btn" onclick="logobtn()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </li>
-                <li><a href="/about/index.html">About</a></li>
-                <li><a href="/contact/index.html">Contact</a></li>
-                <li><a href="/blog/index.html">Blog</a></li>
-                <li><a href="/index.html">Home</a></li>
-            </ul>
+        $(document).ready(function(){
+            $(".main").load("/mainbar.html");
+        });
         </div>
     
         <div class="sidebar">
-            <ul>
-              <li>Tutorials
-                <ul class="submenu">
-                    <li><a href="/tutorials/css">CSS</a></li>
-                    <li><a href="/tutorials/gimp">GIMP</a></li>
-                </ul>
-              </li>
-              <li>Projects
-                <ul class="submenu">
-                    <li><a href="/projects/gimp">GIMP</a></li>
-                    <li><a href="/projects/steemtools">SteemitTools</a></li>
-                </ul>
-              </li>
-              <li>Demos</li>
-            </ul>
+        <script>
+        $(document).ready(function(){
+            $(".sidebar").load("/sidebar.html");
+        });
+        </script>
         </div>
         
         <div id="contents">
