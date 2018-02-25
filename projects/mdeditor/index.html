@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Alan's Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="Alan's Page">
+		<meta name="author" content="AlanZheng">
+		<meta name="robots" content="index, follow">
+
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<!-- Override CSS file - add your own CSS rules -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+        
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/page.js"></script>
+	</head>
+	<body>
+    
+        <div class="main">
+        <script>
+        $(document).ready(function(){
+            $(".main").load("/mainbar.html");
+        });
+        </script>
+        </div>
+    
+        <div class="sidebar">
+        <script>
+        $(document).ready(function(){
+            $(".sidebar").load("/sidebar.html");
+        });
+        </script>
+        </div>
+        
+        <div id="contents">
+        
+        <textarea id="textbox">Type something here</textarea>
+        <button id="create">Create file</button>
+        
+        <script>
+        // https://jsfiddle.net/k56eezxp/
+        (function () {
+            var textFile = null,
+              makeTextFile = function (text) {
+                var data = new Blob([text], {type: 'text/plain'});
+
+                // If we are replacing a previously generated file we need to
+                // manually revoke the object URL to avoid memory leaks.
+                if (textFile !== null) {
+                  window.URL.revokeObjectURL(textFile);
+                }
+
+                textFile = window.URL.createObjectURL(data);
+
+                return textFile;
+              };
+
+
+              var create = document.getElementById('create'),
+                textbox = document.getElementById('textbox');
+
+              create.addEventListener('click', function ()
+              {
+                    var link = document.createElement('a');
+                    link.setAttribute('download', 'info.txt');
+                    link.href = makeTextFile(textbox.value);
+                    document.body.appendChild(link);
+
+                    // wait for the link to be added to the document
+                    window.requestAnimationFrame(function () {
+                    var event = new MouseEvent('click');
+                    link.dispatchEvent(event);
+                    document.body.removeChild(link);
+                    });
+                
+              }, false);
+        })();
+        </script>
+
+        </div>
+        
+	</body>
+</html>
