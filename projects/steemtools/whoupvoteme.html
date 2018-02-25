@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
     <title>SteemTools: who vote me</title>
     <style type="text/css">
-    body {height:100%;text-align:center;}
     a {text-decoration:none;font-weight:bold;color:rgb(26, 80, 153);}
     #fetch {border : solid 2px #ffffff;border-radius : 3px;moz-border-radius : 3px;font-size : 20px;color : #ffffff;	padding : 1px 17px;	background-color : #0a66c9;}
     h1,h2,h3,h4,h5 {color:#0a66c9;}
@@ -11,7 +10,7 @@
 </head>
 <body>
 
-<script src="./steem.min.js"></script>
+<script src="/js/steem.min.js"></script>
 <p>Input your steemit account name<br>
 how many recent posts do you want to check.<br>
 It will report the "voter" and upvote "count"<br>
@@ -20,7 +19,6 @@ Follow/Upvote me : <a href="https://steemit.com/@alanzheng">https://steemit.com/
 <input type="number" id="nb" value=1>
 <button type="submit" id="fetch">Who upvote Me</button>
 <div id="counter"></div>
-
 <script>
 	
             steem.api.setOptions( { url: 'https://api.steemit.com' });
