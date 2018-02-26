@@ -134,7 +134,7 @@
                 var tags = $("#tags").val().split(' ');
                 var mainTag = tags[0];
                 var title = $("#title").val();
-                var postText = document.getElementById('textbox').val();
+                var postText = $("#textbox").val();
                 var authorWif = $("#wif").val();
                 steem.broadcast.comment(
                     authorWif,
