@@ -46,7 +46,8 @@
         <div id="test-editormd">
                 <textarea id="textbox" style="display:none;"></textarea>
         </div>
-        <button id="create">Save to local</button>
+        <input type="text" id="filename" value="unnamed.md">
+        <button id="save">Save to local</button>
 
         <script>
             var testEditor;
@@ -80,13 +81,14 @@
               };
 
 
-              var create = document.getElementById('create'),
-                textbox = document.getElementById('textbox');
+              var save = document.getElementById('save');
+              var textbox = document.getElementById('textbox');
 
-              create.addEventListener('click', function ()
+              save.addEventListener('click', function ()
               {
                     var link = document.createElement('a');
-                    link.setAttribute('download', 'info.txt');
+                    var filename = document.getElementById('filename');
+                    link.setAttribute('download', filename);
                     link.href = makeTextFile(textbox.value);
                     document.body.appendChild(link);
 
