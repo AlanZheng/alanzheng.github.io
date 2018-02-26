@@ -87,7 +87,7 @@
               save.addEventListener('click', function ()
               {
                     var link = document.createElement('a');
-                    var filename = document.getElementById('filename');
+                    var filename = document.getElementById('filename').value;
                     link.setAttribute('download', filename);
                     link.href = makeTextFile(textbox.value);
                     document.body.appendChild(link);
