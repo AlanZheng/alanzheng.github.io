@@ -22,6 +22,13 @@
         <script src="/js/jquery.min.js"></script>
         <script src="/js/editormd.min.js"></script>
         <script src="/js/page.js"></script>
+        
+        <style>
+        label { height: 25px; width:10%; }
+        input { height: 25px; width: 40%; }
+        #author { height: 25px; width: 25%; }
+        button { height: 30px; width: 10%; }
+        </style>
 	</head>
 	<body>
     
@@ -43,17 +50,17 @@
         
         <div id="contents">
         
-        Title: <input type="text" id="title" value="">
-        tags: <input type="text" id="tags" value=""><br>
-        Author: <input type="text" id="author" value="">
-        Wif: <input type="text" id="wif" value=""><br>
+        <label>Title: </label><input type="text" id="title" value="">
+        <label>tags: </label><input type="text" id="tags" value=""><br>
+        <label>Author: </label><input type="text" id="author" value="">
+        <label>Wif: </label><input type="text" id="wif" value="">
         <button id="post">Post</button>
         
         <div id="test-editormd">
                 <textarea id="textbox" style="display:none;"></textarea>
         </div>
         
-        File name: <input type="text" id="filename" value="">
+        <label>File name: </label><input type="text" id="filename" value="">
         <button id="save">Save to local</button>
 
         <script>
@@ -64,7 +71,7 @@
             $(function() {
                 testEditor = editormd("test-editormd", {
                     width   : "100%",
-                    height  : "600",
+                    height  : "500",
                     watch : false,
                     path    : "/js/lib/",
                     toolbarIcons : function() {
