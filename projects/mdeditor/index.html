@@ -46,10 +46,13 @@
         <div id="test-editormd">
                 <textarea id="textbox" style="display:none;"></textarea>
         </div>
-        <input type="text" id="filename" value="unnamed.md">
+        <input type="text" id="filename" value="">
         <button id="save">Save to local</button>
 
         <script>
+            var today = new Date().toISOString().split('T')[0];
+            document.getElementById('filename').value = today + "-" + "unnamed.md";
+            
             var testEditor;
             $(function() {
                 testEditor = editormd("test-editormd", {
