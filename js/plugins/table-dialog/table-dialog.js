@@ -8,7 +8,6 @@
  * {@link       https://github.com/pandao/editor.md}
  * @license     MIT
  */
-
 (function() {
 
 	var factory = function (exports) {
