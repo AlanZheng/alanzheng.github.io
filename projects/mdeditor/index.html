@@ -86,8 +86,15 @@
                     
                     toolbarCustomIcons : {
                         file   : "<input type=\"file\" accept=\".md\" />",
-                        faicon : "<i class=\"fa fa-star\" onclick=\"alert('faicon');\"></i>"
                     },
+                    
+                    onload : function(){
+                        $("[type=\"file\"]").bind("change", function(){
+                            alert($(this).val());
+                            testEditor.cm.replaceSelection($(this).val());
+                            console.log($(this).val(), testEditor);
+                        });
+                    }
                 });
             });
             
