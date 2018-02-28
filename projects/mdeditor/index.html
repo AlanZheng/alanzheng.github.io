@@ -85,12 +85,12 @@
                     },
                     
                     toolbarCustomIcons : {
-                        file   : "<input type=\"file\" accept=\".md\" />",
+                        file   : "<input type=\"file\" id=\"infile2\" accept=\".md\" />",
                     },
                     
                     onload : function(){
                         $("[type=\"file\"]").bind("change", function(){
-                            var file = $(this).val();
+                            var file = document.getElementById('infile2').files[0];
                             var reader = new FileReader();
                             reader.onload = function(e) {
                                 testEditor.cm.replaceSelection(reader.result);
