@@ -90,9 +90,12 @@
                     
                     onload : function(){
                         $("[type=\"file\"]").bind("change", function(){
-                            alert($(this).val());
-                            testEditor.cm.replaceSelection($(this).val());
-                            console.log($(this).val(), testEditor);
+                            var file = $(this).val();
+                            var reader = new FileReader();
+                            reader.onload = function(e) {
+                                testEditor.cm.replaceSelection(reader.result);
+                            }
+                            reader.readAsText(file);
                         });
                     }
                 });
