@@ -61,11 +61,7 @@
         <button id="post">Post</button>
         
         <div id="test-editormd">
-                <textarea id="textbox">Markdown here!</textarea>
-        </div>
-        
-        <div id="mytest">
-                <textarea id="textbox2"></textarea>
+                <textarea id="textbox"></textarea>
         </div>
         
         <input type="file" id="infile" value="" accept=".md, .txt"><br>
@@ -81,11 +77,16 @@
             $(function() {
                 testEditor = editormd("test-editormd", {
                     width   : "100%",
-                    height  : "300",
+                    height  : "500",
                     watch : false,
                     path    : "/js/lib/",
                     toolbarIcons : function() {
                         return ["undo", "redo", "|", "h1", "h2", "h3", "h4", "h5", "h6","|", "bold", "del", "italic", "ucwords", "uppercase", "lowercase", "|",  "hr", "quote", "code", "code-block",  "table",  "list-ul", "list-ol",  "|",  "datetime", "pagebreak", "||", "watch", "fullscreen", "preview"]
+                    },
+                    
+                    toolbarCustomIcons : {
+                        file   : "<input type=\"file\" accept=\".md\" />",
+                        faicon : "<i class=\"fa fa-star\" onclick=\"alert('faicon');\"></i>"
                     },
                 });
             });
