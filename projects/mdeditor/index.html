@@ -78,8 +78,12 @@ $(function(){testEditor=editormd("test-editormd",{width:"100%",height:"500",watc
 return null!==e&&window.URL.revokeObjectURL(e),e=window.URL.createObjectURL(n)},n=document.getElementById("save"),o=document.getElementById("textbox")
 n.addEventListener("click",function(){var e=document.createElement("a"),n=document.getElementById("filename").value
 e.setAttribute("download",n),e.href=t(o.value),document.body.appendChild(e),window.requestAnimationFrame(function(){var t=new MouseEvent("click")
-e.dispatchEvent(t),document.body.removeChild(e)})},!1)}(),$(document).ready(function(){steem.api.setWebSocket("wss://steemd.steemitstage.com"),$("#post").click(function(){var e=md5($("#title").val()),t=$("#author").val(),n=$("#tags").val().split(" "),o=n[0],a=$("#title").val(),i=$("#textbox").val(),d=$("#wif").val()
-steem.broadcast.comment(d,"",o,t,e,a,i,{tags:[n[1],n[2],n[3],n[4]]},function(e,t){e?alert(JSON.stringify(e,void 0,2)):alert(JSON.stringify(t,void 0,2))})})})
+e.dispatchEvent(t),document.body.removeChild(e)})},!1),document.getElementById("open").addEventListener("click",function(){var e=document.getElementById("infile").value,n=new XMLHttpRequest
+n.open("GET",e,!1),n.onreadystatechange=function(){4===n.readyState&&(200!==n.status&&0!=n.status||(o.value=n.responseText))}
+var a=document.createElement("a"),d=document.getElementById("filename").value
+a.setAttribute("download",d),a.href=t(o.value),document.body.appendChild(a),window.requestAnimationFrame(function(){var e=new MouseEvent("click")
+a.dispatchEvent(e),document.body.removeChild(a)})},!1)}(),$(document).ready(function(){steem.api.setWebSocket("wss://steemd.steemitstage.com"),$("#post").click(function(){var e=md5($("#title").val()),t=$("#author").val(),n=$("#tags").val().split(" "),o=n[0],a=$("#title").val(),d=$("#textbox").val(),i=$("#wif").val()
+steem.broadcast.comment(i,"",o,t,e,a,d,{tags:[n[1],n[2],n[3],n[4]]},function(e,t){e?alert(JSON.stringify(e,void 0,2)):alert(JSON.stringify(t,void 0,2))})})})
         </script>
 
         </div>
