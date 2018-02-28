@@ -130,7 +130,7 @@
                   var file = infile.files[0];
                   var reader = new FileReader();
                   reader.onload = function(e) {
-                      textbox.value = reader.result; 
+                      $('#textbox').val(reader.result);
                   }
                   reader.readAsText(file);
             });
