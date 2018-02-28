@@ -89,7 +89,7 @@
                     },
                     
                     onload : function(){
-                        $("[type=\"file\"]").bind("change", function(){
+                        $("#infile2").bind("change", function(){
                             var file = document.getElementById('infile2').files[0];
                             var reader = new FileReader();
                             reader.onload = function(e) {
