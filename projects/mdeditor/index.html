@@ -123,8 +123,11 @@
                     });
                 
               }, false);
-
-              var infile = document.getElementById('infile');
+        })();
+        
+        $(document).ready(function () 
+        {
+            var infile = document.getElementById('infile');
               infile.addEventListener('change', function(e)
               {
                   var file = infile.files[0];
@@ -134,10 +137,7 @@
                   }
                   reader.readAsText(file);
             });
-        })();
-        
-        $(document).ready(function () 
-        {
+            
 			steem.api.setWebSocket("wss://steemd.steemitstage.com");
 			$("#post").click(function () 
             {
