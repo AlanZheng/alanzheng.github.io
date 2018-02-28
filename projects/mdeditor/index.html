@@ -61,7 +61,7 @@
         <button id="post">Post</button>
         
         <div id="test-editormd">
-                <textarea id="textbox" style="display:none;"></textarea>
+                <textarea id="textbox"></textarea>
         </div>
         
         <div id="mytest">
@@ -137,7 +137,7 @@
                   var file = infile.files[0];
                   var reader = new FileReader();
                   reader.onload = function(e) {
-                      $('#textbox2').val(reader.result);
+                      $('#textbox').val(reader.result);
                   }
                   reader.readAsText(file);
             });
