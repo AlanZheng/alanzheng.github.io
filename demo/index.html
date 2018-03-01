@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Alan's Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="Alan's Page">
+		<meta name="author" content="AlanZheng">
+		<meta name="robots" content="index, follow">
 
-    <!-- Basic Page Needs
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8">
-    <title>simpleStore</title>
-    <meta name="description" content="A clean, responsive storefront boilerplate with no database or backend">
-    <meta name="author" content="">
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="/favicon.ico">
+        
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Mobile Specific Metas
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- FONT
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/imports.min.css">
-    <link rel="stylesheet" href="css/simpleStore.min.css">
-
-    <!-- Favicon
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
-</head>
-<body>
-
-    <!-- Primary Page Layout
+		<!-- Override CSS file - add your own CSS rules -->
+        <link rel="stylesheet" href="css/imports.min.css">
+        <link rel="stylesheet" href="css/simpleStore.min.css">
+		<link rel="stylesheet" href="/css/styles.css">
+        
+        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/simpleCart.js"></script>
+        <script src="js/simpleStore.js"></script>
+        <script src="js/config.js"></script>
+        <script src="/js/page.js"></script>
+        
+	</head>
+	<body>
+    
+        <div class="main">
+        <script>
+        $(document).ready(function(){
+            $(".main").load("/mainbar.html");
+        });
+        </script>
+        </div>
+    
+        <div class="sidebar">
+        <script>
+        $(document).ready(function(){
+            $(".sidebar").load("/sidebar.html");
+        });
+        </script>
+        </div>
+        
+        <div id="contents">
+        
+        <!-- Primary Page Layout
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container simpleStore">
         <div class="row">
@@ -68,17 +86,14 @@
     <script id="product-detail-template" type="x-template">
         <div class="simpleCart_shelfItem simpleStore_detailView">
             <a href="#" class="close view_close">&times;</a>
-
             <div class="row">
                 <div class="four columns">
                     <img src="" class="item_thumb"/>
                 </div>
                 <div class="eight columns">
                     <h5 class="item_name"></h5>
-
                     <p class="item_description"></p>
                     <span class="item_price"></span>
-
                     <div class="qty">
                         <label>QTY</label>
                         <input type="number" value="1" min="1" step="1" class="item_Quantity">
@@ -95,7 +110,6 @@
         <div class="simpleStore_cart">
             <h2>Cart</h2>
             <a href="#" class="close">&times;</a>
-
             <div class="row">
                 <div class="eight columns">
                     <div class="simpleCart_items"></div>
@@ -142,15 +156,8 @@
     </script>
 
 <!-- End Document
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
 
-<!-- Scripts
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="js/simpleCart.js"></script>
-<script src="js/simpleStore.js"></script>
-
-<script src="js/config.js"></script>
-
+        </div>
+        
+	</body>
 </html>
