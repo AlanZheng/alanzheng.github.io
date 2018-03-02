@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <script type="text/javascript" src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+        var localDiscussion = null;
+        var index = -1;
+
+        $(document).ready(function () {
+		//steem.api.setWebSocket("wss://steemd.minnowsupportproject.org");
+			steem.api.setWebSocket("wss://steemd.steemitstage.com");
+			 
+			$("#btnGetComments").click(function () {
+				var author = $("#txtAuthor").val();
+				var permlink = $("#postLink").val();
+				//console.log(permlink);
+				steem.api.getContentReplies(author, permlink, contentRepliesCB);					
+			});
+		});
+		function contentRepliesCB(err, result)
+		{
+			//console.log(err, result);
+			if (!err)
+			{ 
+				//$("#resultsTable").empty();
+				for (i = 0; i <= result.length - 1; i++) {
+					//console.log(result[i]);
+					var commentAuthor = result[i].author;							
+					$("#resultsTable").append(commentAuthor);
+					$("#resultsTable").append(" says: ");
+					var commentContent = result[i].body;
+					$("#resultsTable").append(commentContent);
+					$("#resultsTable").append("<br />");
+
+					var childrenNo = result[i].children;
+					if(childrenNo > 0)
+					{
+						var commentLink = result[i].permlink;
+						steem.api.getContentReplies(commentAuthor, commentLink, contentRepliesCB);
+					}
+				}
+			}
+			else
+			{ alert(err);}
+
+		}
+    </script>
+</head>
+<body>
+    <hr />
+
+    <div class="expandablerVotes">
+        <div>
+            Author
+            <input type="text" id="txtAuthor" style="width: 150px;" value="rileyge" /> &nbsp;&nbsp;
+			Post Link
+            <input type="text" id="postLink" style="width: 150px;" value="or-i-am-an-ailurophile" /> &nbsp;&nbsp;
+			<input id="btnGetComments" type="button" value="Get Comments Data" />
+        </div>
+		<br/>
+    </div>
+	<br/>
+	<div id="resultsTable">
+	</div>
+</body>
+</html>
