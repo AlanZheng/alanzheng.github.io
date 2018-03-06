@@ -85,12 +85,6 @@
                 {
                     response.forEach(function (e,i,a)
                     {
-                        var today = new Date().toISOString().split('T')[0];
-                        var created = e.created.split('T')[0];
-
-                        // check if each post is today or not
-                        if( created == today )
-                        {
                             steem.broadcast.vote($("#wif").val(), $("#voter").val(), element, e.permlink, Number($("#nb").val())*100, function(err1, res) 
                             {
                                 if( !err1 )
@@ -98,7 +92,6 @@
                                 else
                                     document.getElementById("info").innerHTML += JSON.stringify(err1.message, undefined, 2);
                             });
-                        }
                     });
                 });
             }
