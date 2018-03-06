@@ -114,6 +114,9 @@ background-color:#a3d5d3;
 
 .sidebar ul li a {
     display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
 .sidebar ul li:hover{
