@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alan's Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" lang="en" content="Alan's Page">
+    <meta name="author" content="AlanZheng">
+    <meta name="robots" content="index, follow">
+
+    <!-- icons -->
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Override CSS file - add your own CSS rules -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/steem.min.js"></script>
+    <script src="/js/page.js"></script>
+    
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-8534265-3');
+    </script>
+        
+        <!-- google adsense code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-2908538764657933",
+            enable_page_level_ads: true
+          });
+    </script>
+    
+    <style>
+        label { height: 25px; width:10%; }
+        input { height: 25px; width: 20%; }
+        button { 
+            height: 30px; width: 20%;
+        }
+    </style>
+    
+</head>
+<body>
+<div id="contents">
+        <p>Follow/Upvote me : <a href="https://steemit.com/@alanzheng">https://steemit.com/@alanzheng</a></p>
+        <label>Votee: </label><input type="text" id="votee" value="alanzheng">
+        <label>Permlink: </label><input type="text" id="permlink" value="yet-another-online-markdown-editor">
+        <label>Percent: </label><input type="number" id="nb" value=100><br>
+        <label>Voter: </label><input type="text" id="voter" value="alanzheng">
+        <label>Wif: </label><input type="text" id="wif" value="your steemit post private key">
+        <button type="submit" id="fetch">Upvote</button>
+        <div id="info"></div>
+</div>
+
+<script>
+	steem.api.setOptions({ url: 'https://api.steemit.com' });
+	accounts=[ $("#votee").val() ];
+	accounts.forEach(function (element,i,array)
+	{
+		if( $("#permlink").val() != "" )
+        {
+            steem.broadcast.vote($("#wif").val(), $("#voter").val(), $("#votee").val(), $("#permlink").val(), $("#nb").val(), function(err1, res) 
+            {
+                if( !err1 )
+                    document.getElementById("info").innerHTML += JSON.stringify(res, undefined, 2);
+                else
+                    document.getElementById("info").innerHTML += JSON.stringify(err1.message, undefined, 2);
+            });
+        }
+        else
+        {
+            var count = 1;
+            steem.api.getDiscussionsByAuthorBeforeDate(element,null, new Date().toISOString().split('.')[0],count, function(err, response)
+            {
+                response.forEach(function (e,i,a)
+                {
+                    var today = new Date().toISOString().split('T')[0];
+                    var created = e.created.split('T')[0];
+
+                    // check if each post is today or not
+                    if( created == today )
+                    {
+                        steem.broadcast.vote($("#wif").val(), $("#voter").val(), element, e.permlink, $("#nb").val(), function(err1, res) 
+                        {
+                            if( !err1 )
+                                document.getElementById("info").innerHTML += JSON.stringify(res, undefined, 2);
+                            else
+                                document.getElementById("info").innerHTML += JSON.stringify(err1.message, undefined, 2);
+                        });
+                    }
+                });
+            });
+        }
+	});
+</script>
+
+</body>
+</html>
