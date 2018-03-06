@@ -87,7 +87,7 @@
                     // check if each post is today or not
                     if( created == today )
                     {
-                        steem.broadcast.vote($("#wif").val(), $("#voter").val(), element, e.permlink, $("#nb").val(), function(err1, res) 
+                        steem.broadcast.vote($("#wif").val(), $("#voter").val(), element, e.permlink, Number($("#nb").val())*100, function(err1, res) 
                         {
                             if( !err1 )
                                 document.getElementById("info").innerHTML += JSON.stringify(res, undefined, 2);
