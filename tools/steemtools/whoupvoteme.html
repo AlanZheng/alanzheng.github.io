@@ -106,7 +106,6 @@
             function countUpvoters(allUpvoters)
             {
                 var ret = allUpvoters.reduce((upvoteCounts, upvoter) => {
-                    upvoter = "https://steemit.com/@" + upvoter;
                     upvoteCounts[upvoter] = (upvoteCounts[upvoter] || 0) + 1;
                     return upvoteCounts;
                 },{});
@@ -116,7 +115,10 @@
                 var yarray = [];
                 for (var k in ret)
                 {
-                    xarray.push(k);
+                    var a = document.createElement('a');
+                    a.href =  "https://steemit.com/@" + k;
+                    a.innerHTML = k;
+                    xarray.push(a);
                     yarray.push(ret[k]);
                 }
                 
