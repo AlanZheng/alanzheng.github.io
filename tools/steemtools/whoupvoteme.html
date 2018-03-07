@@ -19,6 +19,7 @@
         
         <script src="/js/jquery.min.js"></script>
         <script src="/js/steem.min.js"></script>
+        <script src="/js/plotly.min.js"></script>
         <script src="/js/page.js"></script>
         
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -111,21 +112,19 @@
                 },{});
                 
                 var node = document.getElementById('counter');
-                while(node.firstChild)
-                {
-                    node.removeChild(node.firstChild);
-                }
+                var xarray = [];
+                var yarray = [];
                 for (var k in ret)
                 {
-                    var a = document.createElement('a');
-                    a.href =  k;
-                    a.innerHTML = k;
-                    var t = document.createTextNode( "      :       " + ret[k]);
-                    var br = document.createElement("br");
-                    node.appendChild(a);
-                    node.appendChild(t);
-                    node.appendChild(br);
+                    xarray.pus(k);
+                    yarray.push(ret[k]);
                 }
+                
+                Plotly.plot( node, [{
+                    x: xarray,
+                    y: yarray }], { 
+                    margin: { t: 0 } } );
+                    
                 //document.getElementById('counter').innerText += JSON.stringify(ret, null, 2);
                 return ret;
             }
