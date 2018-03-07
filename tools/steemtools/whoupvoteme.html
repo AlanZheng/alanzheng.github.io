@@ -70,65 +70,10 @@
         <button type="submit" id="fetch">Who upvote Me</button>
         <div id="counter"></div>
         <script>
-	
-            steem.api.setOptions( { url: 'https://api.steemit.com' });
-            document.getElementById('fetch').addEventListener('click', CalcUpVoted);
-            
-            function CalcUpVoted()
-            {
-                // call the main function
-                whoUpvotedMe(document.getElementById('user').value);
-            }
-            
-            function whoUpvotedMe(username)
-            {
-                return steem.api.getDiscussionsByAuthorBeforeDate(
-                           username, '', new Date().toISOString().split('.')[0], document.getElementById('nb').value, function (err, posts){
-                    const allUpvoters = getAllUpvoters(posts);
-                    return countUpvoters(allUpvoters);
-                });
-            }
-            
-            function getUpvoters(post)
-            {
-                return post.active_votes.map(upvote => upvote.voter);
-            }
-            
-            function getAllUpvoters(posts)
-            {
-                return posts.reduce(
-                (all, currentPost) => {
-                    const upvoters = getUpvoters(currentPost);
-                    return all.concat(upvoters);
-                }, []);
-            }
-            
-            function countUpvoters(allUpvoters)
-            {
-                var ret = allUpvoters.reduce((upvoteCounts, upvoter) => {
-                    upvoteCounts[upvoter] = (upvoteCounts[upvoter] || 0) + 1;
-                    return upvoteCounts;
-                },{});
-                
-                var node = document.getElementById('counter');
-                var xarray = [];
-                var yarray = [];
-                for (var k in ret)
-                {
-                    var a = '<a href = "https://steemit.com/@' + k  + '"' + ' target=_blank>' + k + '</a>';
-                    xarray.push(a);
-                    yarray.push(ret[k]);
-                }
-                
-                Plotly.plot( node, [{
-                    x: xarray,
-                    y: yarray }], { 
-                    margin: { t: 0 } } );
-                    
-                //document.getElementById('counter').innerText += JSON.stringify(ret, null, 2);
-                return ret;
-            }
-
+            function CalcUpVoted(){whoUpvotedMe(document.getElementById("user").value)}function whoUpvotedMe(t){return steem.api.getDiscussionsByAuthorBeforeDate(t,"",(new Date).toISOString().split(".")[0],document.getElementById("nb").value,function(t,e){return countUpvoters(getAllUpvoters(e))})}function getUpvoters(t){return t.active_votes.map(function(t){return t.voter})}function getAllUpvoters(t){return t.reduce(function(t,e){var n=getUpvoters(e)
+return t.concat(n)},[])}function countUpvoters(t){var e=t.reduce(function(t,e){return t[e]=(t[e]||0)+1,t},{}),n=document.getElementById("counter"),o=[],r=[]
+for(var u in e){var c='<a href = "https://steemit.com/@'+u+'" target=_blank>'+u+"</a>"
+o.push(c),r.push(e[u])}return Plotly.plot(n,[{x:o,y:r}],{margin:{t:0}}),e}steem.api.setOptions({url:"https://api.steemit.com"}),document.getElementById("fetch").addEventListener("click",CalcUpVoted)
         </script>
 
         </div>
