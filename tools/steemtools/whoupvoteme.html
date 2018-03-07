@@ -115,9 +115,7 @@
                 var yarray = [];
                 for (var k in ret)
                 {
-                    var a = document.createElement('a');
-                    a.href =  "https://steemit.com/@" + k;
-                    a.innerHTML = k;
+                    var a = '<a href = https://steemit.com/@' + k + '>' + k + '</a>';
                     xarray.push(a);
                     yarray.push(ret[k]);
                 }
