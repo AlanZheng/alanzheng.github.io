@@ -85,7 +85,7 @@
             function CalcUpVoted(){whoUpvotedMe(document.getElementById("user").value)}function whoUpvotedMe(t){return steem.api.getDiscussionsByAuthorBeforeDate(t,"",(new Date).toISOString().split(".")[0],document.getElementById("nb").value,function(t,e){return countUpvoters(getAllUpvoters(e))})}function getUpvoters(t){return t.active_votes.map(function(t){return t.voter})}function getAllUpvoters(t){return t.reduce(function(t,e){var n=getUpvoters(e)
 return t.concat(n)},[])}function countUpvoters(t){var e=t.reduce(function(t,e){return t[e]=(t[e]||0)+1,t},{}),n=document.getElementById("counter"),o=[],r=[]
 for(var u in e){var c='<a href = "https://steemit.com/@'+u+'" target=_blank>'+u+"</a>"
-o.push(c),r.push(e[u])}return Plotly.plot(n,[{x:o,y:r}],{margin:{t:0}}),e}steem.api.setOptions({url:"https://api.steemit.com"}),document.getElementById("fetch").addEventListener("click",CalcUpVoted)
+o.push(c),r.push(e[u])}return Plotly.deleteTraces(n,0),Plotly.plot(n,[{x:o,y:r}],{margin:{t:0}}),e}steem.api.setOptions({url:"https://api.steemit.com"}),document.getElementById("fetch").addEventListener("click",CalcUpVoted)
         </script>
 
         </div>
