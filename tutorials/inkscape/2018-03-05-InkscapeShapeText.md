@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Inkscape 教程 之 鱼形文字 | Inkscape tutorial -- Shape Text
-tags: [inscape tutorial]
+tags: [inscape tutorial 教程]
 ---
-
-![](https://steemitimages.com/DQmexZ1wtHvi6XndB1KixzZ2cNCR5VKPgXqpw5ZQy6sfjD2/image.png)
 
 1、使用“圆形”、“矩形”工具制作鱼形 | Create fish shape by "circle" and "rectangle" tool.
 
