@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html manifest="StickyNotes.manifest">
+<head>
+<title>Notes</title>
+<style>
+body {
+    font-family: 'Lucida Grande', 'Helvetica', sans-serif;
+}
+
+.note {
+    background-color: rgb(255, 240, 70);
+    height: 250px;
+    padding: 10px;
+    position: absolute;
+    width: 200px;
+    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.note:hover .closebutton {
+    display: block;
+}
+
+.closebutton {
+    display: none;
+    background-image: url(/img/deleteButton.png);
+    height: 24px;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    width: 24px;
+}
+
+.closebutton:active {
+    background-image: url(/img/deleteButtonPressed.png);
+}
+
+.edit {
+    outline: none;
+}
+
+.timestamp {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-size: 9px;
+    background-color: #db0;
+    color: white;
+    border-top: 1px solid #a80;
+    padding: 2px 4px;
+    text-align: right;
+}
+</style>
+<script>
+function Note(){var e=this,t=document.createElement("div")
+t.className="note",t.addEventListener("mousedown",function(t){return e.onMouseDown(t)},!1),t.addEventListener("touchstart",function(t){return e.onTouchStart(t)},!1),t.addEventListener("click",function(){return e.onNoteClick()},!1),this.note=t
+var n=document.createElement("div")
+n.className="closebutton",n.addEventListener("click",function(t){return e.close(t)},!1),t.appendChild(n)
+var o=document.createElement("div")
+o.className="edit",o.setAttribute("contenteditable",!0),o.addEventListener("keyup",function(){return e.onKeyUp()},!1),t.appendChild(o),this.editField=o
+var i=document.createElement("div")
+return i.className="timestamp",i.addEventListener("mousedown",function(t){return e.onMouseDown(t)},!1),i.addEventListener("touchstart",function(t){return e.onTouchStart(t)},!1),t.appendChild(i),this.lastModified=i,document.body.appendChild(t),this}function loadNotes(){db.transaction(storeName).objectStore(storeName).openCursor().onsuccess=function(e){var t=e.target.result
+if(t){var n=new Note
+n.id=t.key,n.text=t.value.text,n.timestamp=t.value.timestamp,n.left=t.value.left,n.top=t.value.top,n.zIndex=t.value.zIndex,n.zIndex>highestZ&&(highestZ=n.zIndex),t.continue()}}}function modifiedString(e){return"Last Modified: "+e.getFullYear()+"-"+(e.getMonth()+1)+"-"+e.getDate()+" "+e.getHours()+":"+e.getMinutes()+":"+e.getSeconds()}function newNote(){var e=new Note
+e.timestamp=(new Date).getTime(),e.id=e.timestamp,e.left=Math.round(400*Math.random())+"px",e.top=Math.round(500*Math.random())+"px",e.zIndex=++highestZ,e.saveAsNew()}window.indexedDB=window.indexedDB||window.mozIndexedDB||window.webkitIndexedDB||window.msIndexedDB,window.IDBTransaction=window.IDBTransaction||window.webkitIDBTransaction||window.msIDBTransaction,window.IDBKeyRange=window.IDBKeyRange||window.webkitIDBKeyRange||window.msIDBKeyRange,window.indexedDB||window.alert("Your browser doesn't support a stable version of IndexedDB.")
+var db=null,storeName="mynotes",objectStore=null,highestZ=0,captured=null,request=window.indexedDB.open("myNoteDB",1)
+request.onerror=function(e){console.log("error: ")},request.onsuccess=function(e){db=request.result,console.log("success: "+db),document.getElementById("newNoteButton").disabled=!db,null!=db&&loadNotes()},request.onupgradeneeded=function(e){db=e.target.result,objectStore=db.createObjectStore(storeName,{keyPath:"id"})},Note.prototype={get id(){return"_id"in this||(this._id=0),this._id},set id(e){this._id=e},get text(){return this.editField.innerHTML},set text(e){this.editField.innerHTML=e},get timestamp(){return"_timestamp"in this||(this._timestamp=0),this._timestamp},set timestamp(e){if(this._timestamp!=e){this._timestamp=e
+var t=new Date
+t.setTime(parseFloat(e)),this.lastModified.textContent=modifiedString(t)}},get left(){return this.note.style.left},set left(e){this.note.style.left=e},get top(){return this.note.style.top},set top(e){this.note.style.top=e},get zIndex(){return this.note.style.zIndex},set zIndex(e){this.note.style.zIndex=e},close:function(e){this.cancelPendingSave()
+var t=this
+db.transaction([storeName],"readwrite").objectStore(storeName).delete(t.id).onsuccess=function(e){}
+var n=e.shiftKey?2:.25
+this.note.style.webkitTransition="-webkit-transform "+n+"s ease-in, opacity "+n+"s ease-in",this.note.offsetTop,this.note.style.webkitTransformOrigin="0 0",this.note.style.webkitTransform="skew(30deg, 0deg) scale(0)",this.note.style.opacity="0",setTimeout(function(){document.body.removeChild(t.note)},1e3*n)},saveSoon:function(){this.cancelPendingSave()
+var e=this
+this._saveTimer=setTimeout(function(){e.save()},200)},cancelPendingSave:function(){"_saveTimer"in this&&(clearTimeout(this._saveTimer),delete this._saveTimer)},save:function(){this.cancelPendingSave(),"dirty"in this&&(this.timestamp=(new Date).getTime(),delete this.dirty)
+var e=this,t=db.transaction([storeName],"readwrite"),n=t.objectStore(storeName),o=n.openCursor()
+o.onerror=function(e){console.log("case if have an error")},o.onsuccess=function(t){var n=t.target.result
+if(n){if(n.value.id==e.id){var o={}
+o.id=e.id,o.text=e.text,o.timestamp=e.timestamp,o.left=e.left,o.top=e.top,o.zindex=e.zIndex
+var i=n.update(o)
+i.onsuccess=function(e){console.log("update success!!")},i.onerror=function(e){console.log("update failed!!")}}n.continue()}else console.log("fin mise a jour")}},saveAsNew:function(){this.timestamp=(new Date).getTime()
+var e=this,t=db.transaction([storeName],"readwrite").objectStore(storeName).add({id:e.id,note:e.text,timestamp:e.timestamp,left:e.left,top:e.top,zindex:e.zIndex})
+t.onsuccess=function(e){},t.onerror=function(e){}},onMouseDown:function(e){captured=this,this.startX=e.clientX-this.note.offsetLeft,this.startY=e.clientY-this.note.offsetTop,this.zIndex=++highestZ
+var t=this
+return"mouseMoveHandler"in this||(this.mouseMoveHandler=function(e){return t.onMouseMove(e)},this.mouseUpHandler=function(e){return t.onMouseUp(e)}),document.addEventListener("mousemove",this.mouseMoveHandler,!0),document.addEventListener("mouseup",this.mouseUpHandler,!0),!1},onMouseMove:function(e){return this!=captured||(this.left=e.clientX-this.startX+"px",this.top=e.clientY-this.startY+"px",!1)},onMouseUp:function(e){return document.removeEventListener("mousemove",this.mouseMoveHandler,!0),document.removeEventListener("mouseup",this.mouseUpHandler,!0),this.save(),!1},onTouchStart:function(e){captured=this,e.preventDefault(),this.startX=e.touches[0].clientX-this.note.offsetLeft,this.startY=e.touches[0].clientY-this.note.offsetTop,this.zIndex=++highestZ
+return document.addEventListener("touchmove",onTouchMove,!1),document.addEventListener("touchend",onTouchEnd,!1),!1},onTouchMove:function(e){return this!=captured||(e.preventDefault(),this.left=e.touches[0].clientX-this.startX+"px",this.top=e.touches[0].clientY-this.startY+"px",!1)},onTouchEnd:function(e){return document.removeEventListener("touchmove",this.mouseMoveHandler,!0),document.removeEventListener("touchend",this.mouseUpHandler,!0),this.save(),!1},onNoteClick:function(e){this.editField.focus(),getSelection().collapseToEnd()},onKeyUp:function(){this.dirty=!0,this.saveSoon()}}
+
+</script>
+</head>
+<body>
+<button id="newNoteButton" onclick="newNote()">New Note</button>
+</body>
+</html>
