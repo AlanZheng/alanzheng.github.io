@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# v0.0000001
+/index.html
+/img/deleteButtonPressed.png
+/img/deleteButton.png
+/css/styles.css
+
+NETWORK:
+#login.asp
+
+FALLBACK:
+#/html5/ /404.html

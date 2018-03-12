@@ -1,13 +1,48 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html manifest="StickyNotes.manifest">
-<head>
-<title>Note</title>
-<style>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Sticky Notes</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" lang="en" content="Alan's Page">
+		<meta name="author" content="AlanZheng">
+		<meta name="robots" content="index, follow">
+
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="/favicon.ico">
+
+		<!-- Override CSS file - add your own CSS rules -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/styles.css">
+        
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/page.js"></script>
+        <style>
 body{font-family:'Lucida Grande','Helvetica',sans-serif}.note{background-color:rgb(255,240,70);height:250px;padding:10px;position:absolute;width:200px;-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.5)}.note:hover .closebutton{display:block}.closebutton{display:none;background-image:url(/img/deleteButton.png);height:24px;position:absolute;left:-15px;top:-15px;width:24px}.closebutton:active{background-image:url(/img/deleteButtonPressed.png)}.edit{outline:none}.timestamp{position:absolute;left:0;right:0;bottom:0;font-size:9px;background-color:#db0;color:white;border-top:1px solid #a80;padding:2px 4px;text-align:right}
-</style>
-<script>
-function Note(){var e=this,t=document.createElement("div")
+        </style>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534265-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-8534265-3');
+        </script>
+        
+        <!-- google adsense code -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-2908538764657933",
+            enable_page_level_ads: true
+          });
+        </script>
+        
+        <script>
+        function Note(){var e=this,t=document.createElement("div")
 t.className="note",t.addEventListener("mousedown",function(t){return e.onMouseDown(t)},!1),t.addEventListener("touchstart",function(t){return e.onTouchStart(t)},!1),t.addEventListener("click",function(){return e.onNoteClick()},!1),this.note=t
 var n=document.createElement("div")
 n.className="closebutton",n.addEventListener("click",function(t){return e.close(t)},!1),n.addEventListener("touchend",function(t){return e.close(t)},!1),t.appendChild(n)
@@ -41,9 +76,30 @@ return"mouseMoveHandler"in this||(this.mouseMoveHandler=function(e){return t.onM
 return this!=captured&&(t=captured),t.left=e.touches[0].pageX-t.startX+"px",t.top=e.touches[0].pageY-t.startY+"px",!1},onTouchEnd:function(e){var t=this
 return this!=captured&&(t=captured),document.removeEventListener("touchmove",t.onTouchMove,!0),document.removeEventListener("touchend",t.onTouchEnd,!0),t.save(),!1},onNoteClick:function(e){this.editField.focus(),getSelection().collapseToEnd()},onKeyUp:function(){this.dirty=!0,this.saveSoon()}}
 
-</script>
-</head>
-<body>
-<button id="newNoteButton" onclick="newNote()">New Note</button>
-</body>
+        </script>
+        
+	</head>
+	<body>
+    
+        <div class="main">
+        <script>
+        $(document).ready(function(){
+            $(".main").load("/mainbar.html");
+        });
+        </script>
+        </div>
+    
+        <div class="sidebar">
+        <script>
+        $(document).ready(function(){
+            $(".sidebar").load("/sidebar.html");
+        });
+        </script>
+        </div>
+        
+        <div id="contents">
+
+        </div>
+        
+	</body>
 </html>
