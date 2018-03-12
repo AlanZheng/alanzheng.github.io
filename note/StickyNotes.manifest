@@ -1,6 +1,8 @@
 CACHE MANIFEST
 # v0.0000001
 /index.html
+/mainbar.html
+/sidebar.html
 
 /img/deleteButtonPressed.png
 /img/deleteButton.png
