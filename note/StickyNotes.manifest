@@ -1,9 +1,14 @@
 CACHE MANIFEST
 # v0.0000001
 /index.html
+
 /img/deleteButtonPressed.png
 /img/deleteButton.png
+
 /css/styles.css
+
+/js/jquery.min.js
+/js/page.js
 
 NETWORK:
 #login.asp
