@@ -1,19 +1,11 @@
 CACHE MANIFEST
 # 2018年03月12日 16:11:35
-/index.html
-/mainbar.html
-/sidebar.html
-
 /img/deleteButtonPressed.png
 /img/deleteButton.png
 /img/note50.png
 /favicon.ico
 
-/css/styles.css
-https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
-
 /js/jquery.min.js
-/js/page.js
 
 NETWORK:
 #login.asp
