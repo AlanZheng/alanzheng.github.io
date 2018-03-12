@@ -10,7 +10,7 @@ body{font-family:'Lucida Grande','Helvetica',sans-serif}.note{background-color:r
 function Note(){var e=this,t=document.createElement("div")
 t.className="note",t.addEventListener("mousedown",function(t){return e.onMouseDown(t)},!1),t.addEventListener("touchstart",function(t){return e.onTouchStart(t)},!1),t.addEventListener("click",function(){return e.onNoteClick()},!1),this.note=t
 var n=document.createElement("div")
-n.className="closebutton",n.addEventListener("click",function(t){return e.close(t)},!1),t.appendChild(n)
+n.className="closebutton",n.addEventListener("click",function(t){return e.close(t)},!1),n.addEventListener("touchend",function(t){return e.close(t)},!1),t.appendChild(n)
 var o=document.createElement("div")
 o.className="edit",o.setAttribute("contenteditable",!0),o.addEventListener("keyup",function(){return e.onKeyUp()},!1),t.appendChild(o),this.editField=o
 var i=document.createElement("div")
