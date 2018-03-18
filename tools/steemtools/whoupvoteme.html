@@ -81,12 +81,8 @@
             <button type="submit" id="fetch">Who upvote Me</button><br/>
         </div>
         <div id="counter"></div>
-        <script>
-            function CalcUpVoted(){whoUpvotedMe(document.getElementById("user").value)}function whoUpvotedMe(e){return steem.api.getDiscussionsByAuthorBeforeDate(e,"",(new Date).toISOString().split(".")[0],document.getElementById("nb").value,function(e,t){return countUpvoters(getAllUpvoters(t))})}function getUpvoters(e){return e.active_votes.map(function(e){return e.voter})}function getAllUpvoters(e){return e.reduce(function(e,t){var o=getUpvoters(t)
-return e.concat(o)},[])}function countUpvoters(e){var t=e.reduce(function(e,t){return e[t]=(e[t]||0)+1,e},{}),o=[],n=[]
-for(var r in t){var s='<a href = "https://steemit.com/@'+r+'" target=_blank>'+r+"</a>"
-o.push(s),n.push(t[r])}var u={x:o,y:n,mode:"lines+markers",type:"scatter"},a=[u],i={title:"The steemitians who upvoted you",displayLogo:!1,showlegend:!1},c={displayLogo:!1,scrollZoom:!0,showLink:!1,modeBarButtonsToRemove:["sendDataToCloud"],displayModeBar:!0}
-return Plotly.newPlot("counter",a,i,c),t}steem.api.setOptions({url:"https://api.steemit.com"}),document.getElementById("fetch").addEventListener("click",CalcUpVoted)
+        <script src="/js/whoupvoteme.min.js">
+            
         </script>
 
         </div>
