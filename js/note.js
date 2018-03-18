@@ -285,6 +285,8 @@ Note.prototype = {
 
         document.addEventListener('touchmove', this.onTouchMove, false);
         document.addEventListener('touchend', this.onTouchEnd, false);
+        
+        this.onNoteClick();
 
         return false;
     },
