@@ -87,20 +87,10 @@
         <button id="save">Save to local</button>
         </div>
 
-        <script>
-        var today=(new Date).toISOString().split("T")[0]
-document.getElementById("filename").value=today+"-unnamed.md"
-var testEditor
-$(function(){testEditor=editormd("test-editormd",{width:"100%",height:"500",watch:!1,path:"/js/lib/",toolbarIcons:function(){return["undo","redo","|","h1","h2","h3","h4","h5","h6","|","bold","del","italic","ucwords","uppercase","lowercase","|","hr","quote","code","code-block","table","list-ul","list-ol","|","datetime","pagebreak","|","file","||","watch","fullscreen","preview"]},toolbarCustomIcons:{file:'<input type="file" id="infile2" accept=".md" />'},onload:function(){$("#infile2").bind("change",function(){var e=document.getElementById("infile2").files[0],t=new FileReader
-t.onload=function(e){testEditor.cm.replaceSelection(t.result)},t.readAsText(e)})}})}),function(){var e=null,t=function(t){var n=new Blob([t],{type:"text/plain"})
-return null!==e&&window.URL.revokeObjectURL(e),e=window.URL.createObjectURL(n)},n=document.getElementById("save"),o=document.getElementById("textbox")
-n.addEventListener("click",function(){var e=document.createElement("a"),n=document.getElementById("filename").value
-e.setAttribute("download",n),e.href=t(o.value),document.body.appendChild(e),window.requestAnimationFrame(function(){var t=new MouseEvent("click")
-e.dispatchEvent(t),document.body.removeChild(e)})},!1)}(),$(document).ready(function(){steem.api.setWebSocket("wss://steemd.steemitstage.com"),$("#post").click(function(){var e=md5($("#title").val()),t=$("#author").val(),n=$("#tags").val().split(" "),o=n[0],i=$("#title").val(),a=$("#textbox").val(),l=$("#wif").val()
-steem.broadcast.comment(l,"",o,t,e,i,a,{tags:[n[1],n[2],n[3],n[4]]},function(e,t){e?alert(JSON.stringify(e,void 0,2)):alert(JSON.stringify(t,void 0,2))})})})
-        </script>
+        <script src="/js/mdeditor.min.js"></script>
 
         </div>
         
+        <script src="/js/standalone.min.js"></script>
 	</body>
 </html>
