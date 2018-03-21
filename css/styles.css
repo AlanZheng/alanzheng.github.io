@@ -27,7 +27,7 @@ background-color:#a3d5d3;
     display: block;
     color: black;
     text-align: center;
-    padding: 1px 1px;
+    padding: 5px 5px;
     text-decoration: none;
 }
 
@@ -37,7 +37,7 @@ background-color:#a3d5d3;
 }
 
 .main ul li .logo-btn{
-    padding : 1px;
+    padding : 5px;
 }
 
 .main ul li .logo-btn span{
