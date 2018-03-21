@@ -33,11 +33,11 @@ background-color:#a3d5d3;
 
 /* Change the link color to #111 (black) on hover */
 .main ul li a:hover {
-    background-color: #2ECC71;
+    //background-color: #2ECC71;
 }
 
 .main ul li .logo-btn{
-    padding : 0px;
+    padding : 2px;
 }
 
 .main ul li .logo-btn span{
