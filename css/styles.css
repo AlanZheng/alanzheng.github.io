@@ -4,7 +4,7 @@ background-color:#a3d5d3;
 
 .main{
     background-color : gray;
-    height : 60px;
+    height : 40px;
     width : 100%;
     position:fixed;
     top : 0px;
@@ -27,7 +27,7 @@ background-color:#a3d5d3;
     display: block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 4px 6px;
     text-decoration: none;
 }
 
