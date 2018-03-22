@@ -123,12 +123,22 @@ background-color:#a3d5d3;
     background-color: #2ECC71;
 }
 
+.sidebar ul li:active{
+    background-color: #2ECC71;
+}
+
 /* when hovering over a .mainmenu item,
   display the submenu inside it.
   we're changing the submenu's max-height from 0 to 500px;
 */
 
 .sidebar li:hover .submenu {
+  display: block;
+  max-height: 500px;
+  z-index: 100;
+}
+
+.sidebar li:active .submenu {
   display: block;
   max-height: 500px;
   z-index: 100;
