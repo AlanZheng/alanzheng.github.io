@@ -1,3 +1,9 @@
+html {
+	overflow: hidden;
+	-ms-touch-action: none;
+	-ms-content-zooming: none;
+}
+
 body {
 background-color:#a3d5d3;
 }
