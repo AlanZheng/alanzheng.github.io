@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   id="svg2"
-   viewBox="0 0 744.09448819 1052.3622047"
+   width="210mm"
    height="297mm"
-   width="210mm">
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1">
   <defs
      id="defs4" />
   <metadata
@@ -27,70 +27,94 @@
   <g
      id="layer1">
     <path
-       id="rect4136"
-       d="m 29.447847,68.881274 0,1.97656 85.712893,29.185546 0,-31.162106 -85.712893,0 z"
-       style="opacity:0.894;fill:#00b498;fill-opacity:1;stroke:#00b498;stroke-width:12.25845051;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1" />
+       style="opacity:0.89;fill:#00b498;fill-opacity:1;stroke:#00b498;stroke-width:12.26;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1"
+       d="m 31,430 0,10 89,30 0,-40 -89,0 z"
+       id="rect4136-5" />
+    <path
+       style="opacity:0.89;fill:#00b498;fill-opacity:1;stroke:#00b498;stroke-width:12.26;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1"
+       d="m 31,69 0,2 89,29 0,-31 -89,0 z"
+       id="rect4136" />
     <rect
-       style="opacity:0.894;fill:#4d4d4d;fill-opacity:1;stroke:#666666;stroke-width:14.61454964;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1"
+       y="21"
+       x="32"
+       height="46"
+       width="6.9e+002"
        id="rect4169"
-       width="685.73517"
-       height="45.872776"
-       x="30.625965"
-       y="20.561594" />
-    <rect
-       transform="matrix(0,1,-1,0,0,0)"
-       y="-84.542053"
-       x="18.51829"
-       height="49.959454"
-       width="326.74121"
+       style="opacity:0.89;fill:#4d4d4d;fill-opacity:1;stroke:#666666;stroke-width:14.61;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1" />
+    <path
        id="rect4152"
-       style="opacity:0.894;fill:#4d4d4d;fill-opacity:1;stroke:#666666;stroke-width:10.52787018;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1" />
+       d="M 36 11 L 36 332 L 36 341 L 36 662 L 86 662 L 86 341 L 86 332 L 86 11 L 36 11 z "
+       style="opacity:0.89;fill:#4d4d4d;fill-opacity:1;stroke:#666666;stroke-width:10.53;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1" />
     <path
-       id="path4175"
-       d="m 29.577447,20.325054 0,47.74219 334.027353,0 0,-47.74219 -334.027353,0 z m 345.162113,2.50586 0.86524,42.54883 44.96484,-21.88086 -45.83008,-20.66797 z"
-       style="opacity:0.894;fill:#00b498;fill-opacity:1;stroke:#00b498;stroke-width:12.25845051;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1" />
+       style="opacity:0.89;fill:#00b498;fill-opacity:1;stroke:#00b498;stroke-width:12.26;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1"
+       d="m 31,20 0,48 339,0 0,-48 -339,0 z m 349,3 0,42 40,-22 -40,-20 z"
+       id="path4175" />
     <text
-       transform="scale(0.97403648,1.0266556)"
-       id="text4178"
-       y="59.466797"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:49.73557281px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="40.662834"
-       style="font-style:normal;font-weight:normal;font-size:49.73557281px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         y="59.466797"
+       y="59.466797"
+       id="text4178"
+       transform="scale(0.97403648,1.0266556)"><tspan
+         id="tspan4180"
          x="40.662834"
-         id="tspan4180">About:</tspan></text>
-    <path
-       id="rect4136-5"
-       d="m 31.097194,433.64031 0,1.97656 85.712886,29.18555 0,-31.16211 -85.712886,0 z"
-       style="opacity:0.894;fill:#00b498;fill-opacity:1;stroke:#00b498;stroke-width:12.25845051;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1" />
+         y="59.466797">About:</tspan></text>
     <rect
-       style="opacity:0.894;fill:#4d4d4d;fill-opacity:1;stroke:#666666;stroke-width:14.61454964;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1"
-       id="rect4169-1"
-       width="685.73517"
-       height="45.872776"
+       y="385.32062"
        x="32.275307"
-       y="385.32062" />
-    <rect
-       transform="matrix(0,1,-1,0,0,0)"
-       y="-86.191383"
-       x="383.27731"
-       height="49.959454"
-       width="326.74121"
-       id="rect4152-9"
-       style="opacity:0.894;fill:#4d4d4d;fill-opacity:1;stroke:#666666;stroke-width:10.52787018;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1" />
+       height="45.872776"
+       width="685.73517"
+       id="rect4169-1"
+       style="opacity:0.894;fill:#4d4d4d;fill-opacity:1;stroke:#666666;stroke-width:14.61454964;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1" />
     <path
-       id="path4175-1"
+       style="opacity:0.894;fill:#00b498;fill-opacity:1;stroke:#00b498;stroke-width:12.25845051;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1"
        d="m 31.226794,385.08409 0,47.74219 334.027346,0 0,-47.74219 -334.027346,0 z m 345.162106,2.50586 0.86524,42.54883 44.96484,-21.88086 -45.83008,-20.66797 z"
-       style="opacity:0.894;fill:#00b498;fill-opacity:1;stroke:#00b498;stroke-width:12.25845051;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:65;stroke-opacity:1" />
+       id="path4175-1" />
     <text
-       transform="scale(0.97403648,1.0266556)"
-       id="text4178-2"
-       y="414.7554"
-       x="42.356144"
+       xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:49.73557281px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         y="414.7554"
+       x="42.356144"
+       y="414.7554"
+       id="text4178-2"
+       transform="scale(0.97403648,1.0266556)"><tspan
+         id="tspan4180-0"
          x="42.356144"
-         id="tspan4180-0">Contact:</tspan></text>
+         y="414.7554">Contact:</tspan></text>
+    <text
+       id="text4164"
+       y="149.50273"
+       x="107.51363"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="149.50273"
+         x="107.51363"
+         id="tspan4166">AlanZheng:</tspan><tspan
+         id="tspan4174"
+         y="199.50273"
+         x="107.51363" /><tspan
+         id="tspan4168"
+         y="249.50272"
+         x="107.51363">Software Developer/Architect, </tspan><tspan
+         id="tspan4170"
+         y="299.50272"
+         x="107.51363">2D/3D geometry Designer, </tspan><tspan
+         id="tspan4172"
+         y="349.50272"
+         x="107.51363">Tech geek, 3D printing Maker.</tspan></text>
+    <text
+       id="text4176"
+       y="526.86481"
+       x="104.14067"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4181"
+         y="526.86481"
+         x="104.14067">Location: Shanghai of China</tspan><tspan
+         id="tspan4185"
+         y="576.86481"
+         x="104.14067">email: microsuncn@gmail.com</tspan><tspan
+         id="tspan4187"
+         y="626.86481"
+         x="104.14067">          63377808@qq.com</tspan></text>
   </g>
 </svg>
