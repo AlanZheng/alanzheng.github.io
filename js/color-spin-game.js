@@ -153,7 +153,7 @@ return sortedallscore;
 }
 
 function actionsputscore(el2,el,el3) {
-$("#levinfo").text("等级"+curlevel);
+$("#levinfo").text("Level"+curlevel);
 $(el2).text("");
 $(el2).removeClass("curascore");
 if(el3 == "actions"){
@@ -183,7 +183,7 @@ for(i=0;i<4;i++){
  $("#board>div").eq(rem[i]).addClass("shadow");
 }
 actions++;
-$("#actions").text("步数: "+actions);
+$("#actions").text("Steps: "+actions);
   checkandwin();
 };
 function checkandwin () {
@@ -312,7 +312,7 @@ restartit();
 StopTimer();
 $("#scoring").hide();
 $(".curascore").removeClass("curascore");
-$("#actions").text("步数: "+actions);
+$("#actions").text("Steps: "+actions);
 $("#timer").text("0:00:00");
 $("#board>div").removeClass("shadow");
 $("#overlay").show().removeClass("overlaywhite");
@@ -357,15 +357,15 @@ function paused() {
 	PauseTimer(); 
 	itspaused=true;
 	$("#board>div,#board").css("visibility","hidden");
-	$("#winmessage").show().html('<div id="pausemess">暂停</div>');	
-	$("#pause").text("开始！");
+	$("#winmessage").show().html('<div id="pausemess">Pause</div>');	
+	$("#pause").text("Start!");
 }
 function restartit() {
 	itspaused=false;
 	RestartTimer();
 	$("#board>div,#board").css("visibility","visible");
 	$("#winmessage").hide().html(remmessage);
-	$("#pause").text("暂停");	
+	$("#pause").text("Pause");	
 }
 $("#winmessage").on( "click","#pausemess", function()  {
 restartit()
