@@ -267,7 +267,7 @@ $(this).addClass("levelselect");
 var lindex = $(this).index();
 curlevel = lindex + 1;
 actions = 0;
-$("#actions").text("步数: "+actions);
+$("#actions").text("Steps: "+actions);
 if(curlevel == 1)
 solution = ["b","b","r","r","b","w","w","r","c","w","w","y","c","c","y","y"];//["c","c","c","c","c","c","c","c","c","c","c","c","c","c","c","y"]
 if(curlevel == 2)
